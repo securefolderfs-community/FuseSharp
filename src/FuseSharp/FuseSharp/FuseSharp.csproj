@@ -1,21 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Library</OutputType>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <RuntimeIdentifier>osx-x64</RuntimeIdentifier>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <NoStdLib>false</NoStdLib>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <NoStdLib>false</NoStdLib>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RootNamespace>FuseSharp</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Mono.Posix.NETStandard" Version="1.0.0" />
+    <AssemblyAttribute Include="System.Runtime.Versioning.SupportedOSPlatformAttribute">
+      <_Parameter1>macos</_Parameter1>
+    </AssemblyAttribute>
   </ItemGroup>
 
 </Project>
